@@ -15,7 +15,11 @@ PrimePalindrome.prototype.checkPrime = function(num) {
 };
 
 PrimePalindrome.prototype.checkPalindrome = function(num){
-    // code for validating if a number is palindrome or not
+    var type_cast_var = num.toString();
+    if (type_cast_var === type_cast_var.split('').reverse().join('')){
+        return true;
+    }
+    return false;
 };
 
 PrimePalindrome.prototype.getSmallerPrimeNumbersThan = function(max_limit){

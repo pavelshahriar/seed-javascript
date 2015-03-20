@@ -14,11 +14,11 @@ describe("PrimePalindrome", function() {
     });
 
     it("should validate a palindrome", function() { // not necessarily it needs to be a prime number
-        expect( true ).toBe( prime_palindrome.checkPalindrome('121'));
+        expect( true ).toBe( prime_palindrome.checkPalindrome(121));
     });
 
     it("should invalidate a non-palindrome", function() { // not necessarily it needs to be a prime number
-        expect( true ).toBe( prime_palindrome.checkPalindrome('122'));
+        expect( false ).toBe( prime_palindrome.checkPalindrome(122));
     });
 
     // there are in total 168 primes under 1000. the formulea is - pi(1000) ~ 168
