@@ -28,10 +28,8 @@ PrimePalindrome.prototype.getLimitedPrimeNumbers = function(max_limit){
 
 PrimePalindrome.prototype.checkPalindrome = function(num){
     var type_cast_var = num.toString();
-    if(type_cast_var === type_cast_var.split('').reverse().join('')){
-        return true;
-    }
-    return false;
+    return type_cast_var === type_cast_var.split('').reverse().join('');
+
 };
 
 PrimePalindrome.prototype.getPrimePalindrome = function(){
