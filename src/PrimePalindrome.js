@@ -16,15 +16,22 @@ PrimePalindrome.prototype.checkPrime = function(num) {
 
 PrimePalindrome.prototype.checkPalindrome = function(num){
     var type_cast_var = num.toString();
-    if (type_cast_var === type_cast_var.split('').reverse().join('')){
+    if(type_cast_var === type_cast_var.split('').reverse().join('')){
         return true;
     }
     return false;
 };
 
-PrimePalindrome.prototype.getSmallerPrimeNumbersThan = function(max_limit){
-    // code for getting all the prime numbers smaller than the supplied limit goes here
-    // dummy code now
+PrimePalindrome.prototype.getLimitedPrimeNumbers = function(max_limit){
+    var current_number = 2; //start counting from 2 as 1 is not a prime number
+    var prime_numbers = [];
+    while(current_number < max_limit){
+        if(this.checkPrime(current_number)){
+            prime_numbers.push(current_number);
+        }
+        current_number++;
+    }
+    return prime_numbers;
 };
 
 PrimePalindrome.prototype.getPrimePalindrome = function(){
