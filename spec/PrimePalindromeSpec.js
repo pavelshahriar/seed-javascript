@@ -9,16 +9,8 @@ describe("PrimePalindrome", function() {
         expect( true ).toBe( prime_palindrome.checkPrime(5) );
     });
 
-    it("should invalidate 10 NOT to be a prime number!", function() {
+    it("should validate 10 NOT to be a prime number!", function() {
         expect( false ).toBe( prime_palindrome.checkPrime(10) );
-    });
-
-    it("should validate a palindrome", function() { // not necessarily it needs to be a prime number
-        expect( true ).toBe( prime_palindrome.checkPalindrome(121));
-    });
-
-    it("should invalidate a non-palindrome", function() { // not necessarily it needs to be a prime number
-        expect( false ).toBe( prime_palindrome.checkPalindrome(122));
     });
 
     // there are in total 25 primes smaller than 100. the formula is - pi(100) ~ 25
@@ -31,7 +23,15 @@ describe("PrimePalindrome", function() {
         expect(168).toBe( prime_palindrome.getLimitedPrimeNumbers(1000).length );
     });
 
-    it("should return the largest prime palindrome smaller than 1000", function() { // not necessarily it needs to be a prime number
+    it("should validate a palindrome", function() { // not necessarily it needs to be a prime number
+        expect( true ).toBe( prime_palindrome.checkPalindrome(121));
+    });
+
+    it("should invalidate a non-palindrome", function() { // not necessarily it needs to be a prime number
+        expect( false ).toBe( prime_palindrome.checkPalindrome(122));
+    });
+
+    it("should return 929, the largest prime palindrome smaller than 1000", function() {
         expect( 929 ).toBe( prime_palindrome.getPrimePalindrome());
     });
 
